@@ -1,0 +1,31 @@
+server:
+  port: 8003
+
+mybatis:
+  mapper-locations: classpath:mappers/*.xml
+  type-aliases-package: com.springcloud.pojo
+  config-location: classpath:mybatis-config.xml
+
+spring:
+  application:
+    name: spring-cloud-provider-dept
+  datasource:
+    driver-class-name: org.gjt.mm.mysql.Driver
+    url: jdbc:mysql://localhost:3306/db03?characterEncoding=utf-8&serverTimezone=GMT
+    username: root
+    password: root
+    type: com.alibaba.druid.pool.DruidDataSource
+
+#Eureka的配置，服务注册到那里
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+  instance:
+    instance-id: spring-cloud-provider-8003 #修改Eureka监控页面的默认描述信息
+
+#info配置，完善监控信息
+info:
+  app.name: Spring-Cloud-Provider
+  company.name: AsiaInfo
+

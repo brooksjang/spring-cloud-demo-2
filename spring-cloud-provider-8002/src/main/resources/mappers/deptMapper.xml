@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.springcloud.dao.DeptDao">
+    <resultMap id="resultMap" type="com.springcloud.pojo.Dept">
+        <result column="dept_no" jdbcType="BIGINT" property="deptNo" />
+        <result column="dept_name" jdbcType="VARCHAR" property="deptName" />
+        <result column="dept_source" jdbcType="VARCHAR" property="deptSource" />
+    </resultMap>
+    
+    <sql id="Base_Column_List">
+        dept_no, dept_name, dept_source
+    </sql>
+
+    <select id="selectAllDept" resultMap="resultMap">
+        select
+        <include refid="Base_Column_List" />
+        from dept
+    </select>
+
+    <select id="selectInfoByPrimaryKey" resultMap="resultMap">
+        select
+        <include refid="Base_Column_List" />
+        from dept
+        where
+        dept_no = #{deptNo, jdbcType=BIGINT}
+    </select>
+
+    <insert id="addDept" parameterType="com.springcloud.pojo.Dept">
+        insert into dept(dept_name, dept_source)
+        values (#{deptName, jdbcType=VARCHAR}, DATABASE())
+    </insert>
+
+    <update id="updateDept" parameterType="com.springcloud.pojo.Dept">
+        update dept
+        <set>
+            <if test="deptName != null and deptName != '' ">
+                dept_name = #{deptName, jdbcType=VARCHAR}
+            </if>
+        </set>
+        where
+        dept_no = #{deptNo, jdbcType=BIGINT}
+    </update>
+
+    <delete id="delDept" parameterType="java.lang.Long">
+        delete from dept where dept_no = #{deptNo, jdbcType=BIGINT}
+    </delete>
+</mapper>

@@ -1,0 +1,9 @@
+# Project exclude paths
+/spring-cloud-api/target/
+/spring-cloud-consumer-6001/target/
+/spring-cloud-eureka-7001/target/
+/spring-cloud-eureka-7002/target/
+/spring-cloud-eureka-7003/target/
+/spring-cloud-provider-8001/target/
+/spring-cloud-provider-8002/target/
+/spring-cloud-provider-8003/target/
