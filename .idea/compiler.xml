@@ -9,6 +9,7 @@
         <module name="spring-cloud-consumer-feign" />
         <module name="spring-cloud-provider-8002" />
         <module name="spring-cloud-provider-8001" />
+        <module name="spring-cloud-provide-hystrix-8004" />
         <module name="spring-cloud-eureka-7003" />
         <module name="spring-cloud-eureka-7002" />
         <module name="spring-cloud-eureka-7001" />

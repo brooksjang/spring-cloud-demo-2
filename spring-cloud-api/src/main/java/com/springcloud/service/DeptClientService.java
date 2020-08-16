@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.util.List;
 
 @Component
-@FeignClient(value = "SPRING-CLOUD-PROVIDER-DEPT")
+@FeignClient(value = "SPRING-CLOUD-PROVIDER-DEPT", fallbackFactory=DeptClientServiceFallbackFactory.class)
 public interface DeptClientService {
 
     //增
