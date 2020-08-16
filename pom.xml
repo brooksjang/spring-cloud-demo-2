@@ -16,6 +16,7 @@
         <module>spring-cloud-eureka-7003</module>
         <module>spring-cloud-provider-8002</module>
         <module>spring-cloud-provider-8003</module>
+        <module>spring-cloud-consumer-feign</module>
     </modules>
 
     <packaging>pom</packaging>

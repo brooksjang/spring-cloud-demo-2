@@ -1,4 +1,4 @@
-package com.springclooud;
+package com.springcloud;
 
 import com.config.MyRule;
 import org.springframework.boot.SpringApplication;
