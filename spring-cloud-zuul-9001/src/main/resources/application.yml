@@ -1,0 +1,29 @@
+server:
+  port: 9001
+
+spring:
+  application:
+    name: springcloud-zuul
+
+#Eureka的配置，服务注册到那里
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+  instance:
+    instance-id: zuul9001.com
+    prefer-ip-address: true #隐藏真实ip
+
+#info配置，完善监控信息
+info:
+  app.name: Spring-Cloud-Zuul
+  company.name: AsiaInfo
+
+#Zuul路由配置
+zuul:
+  routes:
+    mydept.serviceId: spring-cloud-provider-dept
+    mydept.path: /mydept/**
+  ignored-services: "*"  #不能再使用这个路径访问
+  #  ignored-services: spring-cloud-provider-dept  #不能再使用这个路径访问
+  prefix: /brooks

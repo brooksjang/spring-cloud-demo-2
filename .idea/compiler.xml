@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="spring-cloud-zuul-9001" />
         <module name="spring-cloud-provider-8002" />
         <module name="spring-cloud-api" />
         <module name="spring-cloud-consumer-hystrix-dashboard" />

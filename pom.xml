@@ -19,6 +19,7 @@
         <module>spring-cloud-consumer-feign</module>
         <module>spring-cloud-provide-hystrix-8004</module>
         <module>spring-cloud-consumer-hystrix-dashboard</module>
+        <module>spring-cloud-zuul-9001</module>
 
     </modules>
 
