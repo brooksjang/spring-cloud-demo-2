@@ -20,6 +20,7 @@
         <module>spring-cloud-provide-hystrix-8004</module>
         <module>spring-cloud-consumer-hystrix-dashboard</module>
         <module>spring-cloud-zuul-9001</module>
+        <module>spring-cloud-gateway-9002</module>
 
     </modules>
 

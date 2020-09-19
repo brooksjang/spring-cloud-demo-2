@@ -1,0 +1,35 @@
+server:
+  port: 9002
+
+spring:
+  application:
+    name: springcloud-gateway
+#  配置gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true #开启从注册中心创建动态路由的功能，利用微服务名进行路由
+      routes:
+        - id: provider_01   #route，路由的id，没有固定规则但要求唯一性，建议配合服务名
+#          uri: http://localhost:8001  #匹配后提供服务的路由地址(静态配置，写死，不服个要求，再动态路由环境下注释掉)
+          uri: lb://SPRING-CLOUD-PROVIDER-DEPT  #动态理由配置，直接为再eureka的注册名，lb为前缀，loadBalance
+          predicates:
+            - Path=/provider/dept/**  #断言，路径相匹配的进行路由
+
+#Eureka的配置，服务注册到那里
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/
+#      ,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+  instance:
+    instance-id: gateway9002.com
+    prefer-ip-address: true #隐藏真实ip
+
+#info配置，完善监控信息
+info:
+  app.name: Spring-Cloud-Gateway
+  company.name: AsiaInfo
+
+
