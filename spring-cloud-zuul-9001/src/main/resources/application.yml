@@ -23,7 +23,7 @@ info:
 zuul:
   routes:
     mydept.serviceId: spring-cloud-provider-dept
-    mydept.path: /mydept/**
+    mydept.path: /mydept/** #用“/mydept/**”替换“spring-cloud-provider-dept”
   ignored-services: "*"  #不能再使用这个路径访问
   #  ignored-services: spring-cloud-provider-dept  #不能再使用这个路径访问
   prefix: /brooks

@@ -1,6 +1,6 @@
 package com.springcloud;
 
-import com.config.MyRule;
+import com.ruleconfig.MyRule;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;

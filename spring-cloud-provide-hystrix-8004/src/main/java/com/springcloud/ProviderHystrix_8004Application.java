@@ -17,6 +17,10 @@ public class ProviderHystrix_8004Application {
         SpringApplication.run(ProviderHystrix_8004Application.class, args);
     }
 
+    /**
+     * 这是一段固定代码，开启Hystrix监控
+     * @return
+     */
     @Bean
     public ServletRegistrationBean getHystrixMetricsStreamServlet() {
         ServletRegistrationBean servletRegistrationBean = new ServletRegistrationBean(new HystrixMetricsStreamServlet());

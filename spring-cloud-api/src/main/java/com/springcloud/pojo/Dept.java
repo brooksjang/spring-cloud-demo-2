@@ -6,9 +6,10 @@ import lombok.experimental.Accessors;
 
 import java.io.Serializable;
 
-@Data
-@NoArgsConstructor
-@Accessors
+//idea需要先安装Lombok插件
+@Data                   //所有属性的get和set方法、toString 方法、hashCode方法、equals方法
+@NoArgsConstructor      //无参构造
+@Accessors              //链式编程
 public class Dept implements Serializable {
     private Long deptNo;
     private String deptName;

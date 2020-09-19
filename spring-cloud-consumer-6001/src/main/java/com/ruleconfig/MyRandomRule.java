@@ -15,7 +15,7 @@
  * limitations under the License.
  *
  */
-package com.config;
+package com.ruleconfig;
 
 import com.netflix.client.config.IClientConfig;
 import com.netflix.loadbalancer.AbstractLoadBalancerRule;

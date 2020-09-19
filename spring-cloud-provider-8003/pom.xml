@@ -24,6 +24,7 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
+        <!--通用pojo与服务类-->
         <dependency>
             <groupId>org.example</groupId>
             <artifactId>spring-cloud-api</artifactId>

@@ -1,7 +1,7 @@
-package com.config;
+package com.ruleconfig;
 
 import com.netflix.loadbalancer.IRule;
-import com.netflix.loadbalancer.RandomRule;
+import com.ruleconfig.MyRandomRule;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

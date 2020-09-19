@@ -3,5 +3,5 @@ server:
 eureka:
   client:
     register-with-eureka: false #不向Eureka注册中心注册自己
-    service-url:
+    service-url:  #获取注册中心
       defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/

@@ -4,7 +4,6 @@ import com.springcloud.pojo.Dept;
 import feign.hystrix.FallbackFactory;
 import org.springframework.stereotype.Component;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
