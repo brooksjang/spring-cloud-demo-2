@@ -1,0 +1,33 @@
+server:
+  port: 3355
+
+spring:
+  application:
+    name: spring-cloud-config-client
+  cloud:
+    config:
+      label: master #分支名称
+      name: config  #配置文件名称
+      profile: dev  #配置文件后缀名称，即master分支config-dev.yml
+      uri: http://localhost:3344  #服务端配置中心地址
+
+#Eureka的配置，服务注册到那里
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/
+  #      ,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/ #Eureka集群配置
+  instance:
+    instance-id: spring-cloud-config-3355 #修改Eureka监控页面的默认描述信息
+
+#info配置，完善Eureka页面监控信息
+info:
+  app.name: Spring-Cloud-Config-Client
+  company.name: AsiaInfo
+
+#暴漏健康断点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

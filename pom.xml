@@ -21,6 +21,8 @@
         <module>spring-cloud-consumer-hystrix-dashboard</module>
         <module>spring-cloud-zuul-9001</module>
         <module>spring-cloud-gateway-9002</module>
+        <module>spring-cloud-config-3344</module>
+        <module>spring-cloud-config-3355</module>
 
     </modules>
 
