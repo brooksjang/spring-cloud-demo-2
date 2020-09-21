@@ -12,6 +12,11 @@ spring:
           search-paths:
             - springcloud-config
       label: master
+  rabbitmq:
+    host: 192.168.126.129
+    port: 5672
+    username: admin
+    password: 123456
 
 #Eureka的配置，服务注册到那里
 eureka:
@@ -26,4 +31,9 @@ eureka:
 info:
   app.name: Spring-Cloud-Config-Server
   company.name: AsiaInfo
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'bus-refresh'
 

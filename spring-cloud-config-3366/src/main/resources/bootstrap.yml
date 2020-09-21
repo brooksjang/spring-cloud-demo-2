@@ -1,5 +1,5 @@
 server:
-  port: 3355
+  port: 3366
 
 spring:
   application:
@@ -23,7 +23,7 @@ eureka:
       defaultZone: http://eureka7001.com:7001/eureka/
   #      ,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/ #Eureka集群配置
   instance:
-    instance-id: spring-cloud-config-3355 #修改Eureka监控页面的默认描述信息
+    instance-id: spring-cloud-config-3366 #修改Eureka监控页面的默认描述信息
 
 #info配置，完善Eureka页面监控信息
 info:

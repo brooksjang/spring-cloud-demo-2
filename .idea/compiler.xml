@@ -9,7 +9,10 @@
         <module name="spring-cloud-consumer-6001" />
         <module name="spring-cloud-zuul-9001" />
         <module name="spring-cloud-config-3344" />
+        <module name="spring-cloud-stream-rabbitmq-provider-8801" />
         <module name="spring-cloud-config-3355" />
+        <module name="spring-cloud-stream-rabbitmq-consumer-8804" />
+        <module name="spring-cloud-stream-rabbitmq-consumer-8803" />
         <module name="spring-cloud-consumer-hystrix-dashboard" />
         <module name="spring-cloud-provider-8003" />
         <module name="spring-cloud-provider-8002" />
@@ -20,6 +23,7 @@
         <module name="spring-cloud-eureka-7002" />
         <module name="spring-cloud-eureka-7001" />
         <module name="spring-cloud-consumer-feign" />
+        <module name="spring-cloud-config-3366" />
         <module name="spring-cloud-api" />
       </profile>
     </annotationProcessing>
