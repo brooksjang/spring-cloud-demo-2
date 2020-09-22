@@ -9,7 +9,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.util.List;
 
 @Component
-//服务降级
+//整合Feign：“value = "SPRING-CLOUD-PROVIDER-DEPT"”，即指定提供者
+//服务降级：fallbackFactory=DeptClientServiceFallbackFactory.class
 @FeignClient(value = "SPRING-CLOUD-PROVIDER-DEPT", fallbackFactory=DeptClientServiceFallbackFactory.class)
 public interface DeptClientService {
 

@@ -14,6 +14,9 @@ import java.util.List;
 public class DeptConsumerController {
     Logger logger = LoggerFactory.getLogger(DeptConsumerController.class);
 
+    /**
+     * 上面定义的 Feign Client
+     */
     @Autowired
     private DeptClientService service;
 
